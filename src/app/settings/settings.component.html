@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="settingsApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+      background-color:  #b6cfde;
+    }
+    .settings-header {
+      margin-bottom: 20px;
+    }
+    .settings-card {
+      margin-bottom: 20px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('settingsApp', [])
+      .controller('SettingsController', function($scope) {
+        $scope.showPasswordForm = false;
+        $scope.showNotificationOptions = false;
+
+        $scope.togglePasswordForm = function() {
+          $scope.showPasswordForm = !$scope.showPasswordForm;
+        };
+
+        $scope.toggleNotificationOptions = function() {
+          $scope.showNotificationOptions = !$scope.showNotificationOptions;
+        };
+      });
+  </script>
+</head>
+<body ng-controller="SettingsController">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="settings-header">
+          <h2>Settings</h2>
+          <p>Customize your preferences</p>
+        </div>
+
+        <div class="card settings-card">
+          <div class="card-header">
+            Security Options
+          </div>
+          <div class="card-body">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="twoFactorAuth">
+              <label class="form-check-label" for="twoFactorAuth">Enable Two-Factor Authentication</label>
+            </div>
+            <div class="form-group">
+              <a href="#" ng-click="togglePasswordForm()">Change Password</a>
+            </div>
+            <div ng-show="showPasswordForm">
+              <div class="form-group">
+                <label for="currentPassword">Current Password</label>
+                <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+              </div>
+              <div class="form-group">
+                <label for="newPassword">New Password</label>
+                <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+              </div>
+              <div class="form-group">
+                <label for="confirmNewPassword">Confirm New Password</label>
+                <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm new password">
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card settings-card">
+          <div class="card-header">
+            Notification Options
+          </div>
+          <div class="card-body">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="notificationsEnabled">
+              <label class="form-check-label" for="notificationsEnabled">Enable notifications</label>
+            </div>
+            <div class="form-group">
+              <label for="notificationSound">Notification Sound</label>
+              <select class="form-control" id="notificationSound">
+                <option value="default">Default</option>
+                <option value="sound1">Sound 1</option>
+                <option value="sound2">Sound 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="card settings-card">
+          <div class="card-header">
+            Help & Support
+          </div>
+          <div class="card-body">
+            <p>If you need any assistance, please contact our support team.</p>
+            <button type="button" class="btn btn-primary">Contact Support</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+        <div class="card settings-card">
+          <div class="card-header">
+            General Information
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

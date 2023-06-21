@@ -1,0 +1,168 @@
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex-grow: 1;
+      padding-top: 70px;
+      text-align: center;
+    }
+    .card-deck {
+      margin-top: 50px;
+    }
+    .services {
+      background-color: #b6cfde;
+      padding: 50px 0;
+    }
+    .services h2 {
+      margin-bottom: 30px;
+    }
+    .services .service-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .services .service-item img {
+      max-width: 200px;
+      margin-bottom: 15px;
+    }
+    .additional-content {
+      background-color: #b6cfde;
+      padding: 50px 0;
+    }
+    .additional-content h2 {
+      margin-bottom: 30px;
+    }
+    .additional-content p {
+      font-size: 18px;
+    }
+    .card-height {
+      height: 100%;
+    }
+    .card-equal-height {
+      height: 100%;
+    }
+    #but {
+      margin-top: 60px;
+      margin-bottom: 70px;
+    }
+    .logo-img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+    .card-custom-height {
+      min-height: 250px; /* Adjust the value as needed */
+    }
+  </style> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img class="logo-img" src="../../assets/logo.png" alt="Logo">
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="/landing">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Register</a>
+          </li>
+          
+      </ul>
+    </div>
+  </nav>
+  <div class="content">
+    <h1>Welcome to Bug Tracker</h1>
+    <p>Track. Resolve. Conquer. Bug Tracker - Your Path to Flawless Software.</p>
+    <div class="text-center mt-4">
+      <a class="btn btn-primary" routerLink="/login" id="but">Get Started</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card card-custom-height">
+          <div class="card-body">
+            <h5 class="card-title">About Us</h5>
+            <p class="card-text">"Empowering Teams, Enhancing Efficiency Your Partner in Seamless Software Development."
+            Want to know more about us?</p>
+            <a routerLink="/about">Click Here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 card-equal-height">
+        <div class="card card-custom-height">
+          <div class="card-body" id="img">
+            <h5 class="card-title" ></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-custom-height">
+          <div class="card-body">
+            <h5 class="card-title">Contact Us</h5>
+            <p class="card-text">"Reach Out, We're Here to Help. Contact Bug Tracker for Support and Solutions."</p>
+            <p><a routerLink="/contact">Click Here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hello">
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="../../assets/broken.png" alt="Service 1">
+              <h4>Bug Tracking</h4>
+              <div class="para">
+                <p>Smoothly sail through bugs with our robust resolution system. Will be able to log and monitor bugs or errors during software testing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="../../assets/priority-prioritize-line-icon-vector.jpg" alt="Service 2">
+              <h4>Prioritizing Defects</h4>
+              <div class="para">
+                <p>The number of defects gets multiplied over a period of time and can be effectively managed</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <img src="../../assets/4319166.png" alt="Service 3">
+              <h4>Defect Tracking</h4>
+              <div class="para">
+                <p>Defects can be tracked and managed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<app-footer></app-footer>

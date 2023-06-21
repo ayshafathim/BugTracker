@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #b6cfde;
+  }
+  
+  .hero {
+    /* background: url('background-image.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .hero .btn-primary {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+  
+  .services {
+    background-color: #b6cfde;
+    padding: 50px 0;
+  }
+  
+  .services h2 {
+    margin-bottom: 30px;
+  }
+  
+  .services .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .services .service-item img {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .additional-content {
+    background-color: #b6cfde;
+    padding: 50px 0;
+  }
+  
+  .additional-content h2 {
+    margin-bottom: 30px;
+  }
+  
+  .additional-content p {
+    font-size: 18px;
+  }
+  .content {
+    flex-grow: 1;
+    padding-top: 70px;
+    text-align: center;
+    /* background-image: url(https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80); */
+    background-position: center;
+    background-size: cover;
+    background-position-x:-80px ;
+    background-position-y:20px ;
+    background-color: #b6cfde;
+  }
+  #img{
+  animation: fade 5s infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 215px;
+  
+  }
+  @keyframes fade{
+    
+    0%,25%{
+      background-image: url('https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJvdXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60');
+    }
+    25%,50%{
+      background-image: url('https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60');
+    }
+    50%,75%{
+      background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+    }
+    75%,100%{
+      background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWJvdXQlMjB1c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60');
+    }
+  }
+  .ser{
+    background-color: rgba(127, 173, 190, 0.354);
+  }
+  .container{
+    background-color: rgba(127, 173, 190, 0.354);
+  }
+  
+  .services[_ngcontent-ng-c1578615814] {
+    background-color: #b6cfde;
+    padding: 50px 0;
+  }
+  .para{
+    text-align: center;
+  }
+  .hello{
+    background-color: #b6cfde;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .content {
+    flex-grow: 1;
+    padding-top: 70px;
+    text-align: center;
+  }
+  .card-deck {
+    margin-top: 50px;
+  }
+  .services {
+    background-color: #b6cfde;
+    padding: 50px 0;
+  }
+  .services h2 {
+    margin-bottom: 30px;
+  }
+  .services .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .services .service-item img {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  .additional-content {
+    background-color: #b6cfde;
+    padding: 50px 0;
+  }
+  .additional-content h2 {
+    margin-bottom: 30px;
+  }
+  .additional-content p {
+    font-size: 18px;
+  }
+  .card-height {
+    height: 100%;
+  }
+  .card-equal-height {
+    height: 100%;
+  }
+  #but {
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+  .logo-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .card-custom-height {
+    min-height: 250px; /* Adjust the value as needed */
+  }

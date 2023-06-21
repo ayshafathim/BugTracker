@@ -1,0 +1,107 @@
+body{background-color: #eee}
+
+.form-control:focus{
+
+    padding: 20px;
+
+    color: #495057;
+
+    background-color: #fff;
+
+    border-color: #80bdff;
+
+    outline: 0;
+
+    box-shadow: 0 0 0 0rem rgba(0,123,255,.25)}
+
+.btn-secondary:focus{
+
+    box-shadow: 0 0 0 0rem rgba(108,117,125,.5)}
+
+.close:focus{
+
+    box-shadow: 0 0 0 0rem rgba(108,117,125,.5)}.mt-200{margin-top:200px}
+
+.container{
+
+    height: 550px;
+
+    width: auto;
+    
+}
+
+.submitBtn{
+
+    padding-right: 90px;
+   
+
+}
+
+.backbtn{
+
+    align-items:flex-end
+    
+
+}
+.form-group{
+ width:40%;
+}
+/* .fg{
+    margin-right: auto;
+} */
+.fg1{
+    display: inline-block;
+    
+}
+.form-group{
+    display: inline-table;
+    margin: 13px;
+    text-align: center;
+    height: 70px;
+    margin-right: 90px;
+    
+}
+.fg2{
+    display: inline-block;
+    
+}
+
+button{
+    margin-right: 60px;
+}
+
+h4{
+    margin-left: 485px;
+    margin-top: 30px;
+}
+
+.drop1{
+    display: inline-table;
+    margin: 13px;
+    text-align: center;
+    height: 70px;
+    margin-right: 90px;
+    
+}
+.drop2{
+    display: inline-table;
+    margin: 13px;
+    text-align: center;
+    height: 70px;
+    margin-left: 275px;
+}
+#dropdown1{
+    padding-left: 10px;
+}
+.container
+{
+    background-color:  rgba(127, 173, 190, 0.354);
+    
+}
+#but{
+    margin-bottom: -120px;
+    margin-left: -45px;
+}
+.fefy{
+    margin-left: 75px;
+}
