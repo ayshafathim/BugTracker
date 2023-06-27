@@ -1,9 +1,9 @@
 export interface Bug {
-    projectId: number;
+    Id: number;
     bugName: string;
     description: string;
-    assignedTo: string;
-    assignedBy: string;
+    developer: string;
+    reporter: string;
     status: string;
     updateStatus: string;
     createdDate: string;

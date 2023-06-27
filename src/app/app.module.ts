@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LandingComponent } from './landing/landing.component';
+import { SubadminComponent } from './subadmin/subadmin.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LandingComponent } from './landing/landing.component';
     LoginComponent,
     SettingsComponent,
     LandingComponent,
+    SubadminComponent,
   
   ],
   imports: [

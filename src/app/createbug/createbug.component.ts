@@ -13,11 +13,11 @@ import { BugupdationComponent } from '../bugupdation/bugupdation.component';
 export class CreatebugComponent {
 
   newBug: Bug = {
-    projectId: 0,
+    Id: 0,
     bugName: '',
     description: '',
-    assignedTo: '',
-    assignedBy: '',
+    developer: '',
+    reporter: '',
     status: '',
     updateStatus: '',
     createdDate: ''
@@ -32,11 +32,11 @@ export class CreatebugComponent {
     console.log('Bug assigned:', this.newBug);
     // Reset the form or navigate to another page if needed
     this.newBug = {
-      projectId: 0,
+      Id: 0,
       bugName: '',
       description: '',
-      assignedTo: '',
-      assignedBy: '',
+      developer: '',
+      reporter: '',
       status: '',
       updateStatus: '',
       createdDate: ''

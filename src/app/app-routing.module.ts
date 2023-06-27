@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LandingComponent } from './landing/landing.component';
+import { SubadminComponent } from './subadmin/subadmin.component';
 
 const routes: Routes = [
   {path:'bugupdation',component:BugupdationComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
  {path:'signup',component:SignupComponent},
  {path:'login',component:LoginComponent},
  {path:'settings',component:SettingsComponent},
+ {path:'subadmin',component:SubadminComponent},
  {path:'',component:LandingComponent}
   
 ];

@@ -1,0 +1,224 @@
+.sidebar {
+
+    background-color: #f8f9fa;
+
+    
+
+  }
+
+
+
+
+  .sidebar-nav {
+    width: 400px;
+
+    padding-top: 20px;
+
+  }
+
+
+
+
+  .sidebar-nav .nav-link {
+
+    margin-bottom: 5px;
+
+  }
+
+
+
+
+  .content {
+
+    /* padding: 20px; */
+
+    /* padding-top: 20px; */
+
+    margin-top: 3rem;
+
+  }
+
+
+
+
+  .center-table {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /* height: 100vh; */
+
+  }
+
+
+
+
+  .search-container {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-left: 790px;
+
+    margin-top: 10px;
+
+  }
+
+
+
+
+  .search-input {
+
+    max-width: 150px;
+
+    /* margin-right: 10px; */
+
+  }
+
+
+
+
+  table {
+
+    background-color: #b6cfde;
+
+    color: white;
+
+    border: 1px solid white;
+
+  }
+
+
+
+
+
+  table {
+
+    background-color: black;
+
+    color: white;
+
+    /* border: 1px solid black; */
+
+    margin-bottom: 80px;
+
+  }
+
+
+
+
+   .sidebar {
+
+    background-color: #b6cfde;
+
+    height: 90.8vh;
+    
+
+  }
+
+
+
+
+  .sidebar-nav .nav-link {
+
+    margin-bottom: 90px;
+
+  }
+
+
+
+
+  h2 {
+
+    margin-top: 0.2px;
+
+
+
+
+  }
+
+
+
+
+  .btn-light {
+
+    width: 11.5rem;
+
+    height: 3rem;
+
+    margin-top: .6rem;
+
+  }
+
+  .button{
+    margin-right: 20px;
+  }
+
+
+  .status-block {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+	border-radius: 5px;
+	
+  }
+  
+
+  .default {
+	background-color: red;
+	color: white;
+  }
+  
+  .open {
+	background-color: red;
+	color: white;
+  }
+  
+  .closed {
+	background-color: green;
+	color: white;
+  }
+  
+  .in-progress {
+	background-color: yellow;
+	color: black;
+  }
+  
+
+  .select-wrapper {
+	position: relative;
+  }
+  
+  select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding-right: 24px;
+  }
+  
+  .arrow {
+	position: absolute;
+	top: 50%;
+	right: 6px;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #000;
+	pointer-events: none;
+  }
+  
