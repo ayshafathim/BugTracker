@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,54 +8,65 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  cred: Sign = new Sign("", "", "", "");
-  passwordsMatch: boolean = true;
-  emailMatch: boolean = true;
+  signupForm!: FormGroup; // Add the '!' operator to indicate it will be assigned later
+  isAccountCreated = false;
 
-  constructor(private route: Router) {}
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.signupForm = this.formBuilder.group(
+      {
+        username: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+        confirmPassword: ['', Validators.required],
+      },
+      { validators: this.passwordMatchValidator }
+    );
+  }
 
-  submit() {
-    if (this.passwordsMatch === false) {
-      alert("Invalid password");
-    } else if (this.passwordsMatch === true && this.emailMatch === true) {
-      this.route.navigate(['login']);
+  get username() {
+    return this.signupForm.get('username');
+  }
+
+  get email() {
+    return this.signupForm.get('email');
+  }
+
+  get password() {
+    return this.signupForm.get('password');
+  }
+
+  get confirmPassword() {
+    return this.signupForm.get('confirmPassword');
+  }
+
+  passwordMatchValidator(formGroup: FormGroup) {
+    const passwordControl = formGroup.get('password');
+    const confirmPasswordControl = formGroup.get('confirmPassword');
+
+    if (passwordControl && confirmPasswordControl) {
+      const password = passwordControl.value;
+      const confirmPassword = confirmPasswordControl.value;
+
+      if (password !== confirmPassword) {
+        confirmPasswordControl.setErrors({ passwordMismatch: true });
+      } else {
+        confirmPasswordControl.setErrors(null);
+      }
     }
   }
 
-  checkPasswords() {
-    if (this.cred.password === this.cred.re_password) {
-      this.passwordsMatch = true;
-    } else {
-      this.passwordsMatch = false;
+  onSubmit() {
+    if (this.signupForm.invalid) {
+      return;
     }
-  }
 
-  checkEmail() {
-    if (this.cred.email.match("[a-zA-Z0-9._%+-]+@[a-z]+\\.[a-zA-Z]{2,}")) {
-      this.emailMatch = true;
-    } else {
-      alert("Invalid email");
-      this.emailMatch = false;
-    }
+    // Perform the signup logic here, such as sending a request to your backend API
+    // ...
+
+    this.signupForm.reset();
+    this.isAccountCreated = true;
+    
   }
 }
-
-export class Sign {
-  name: string;
-  email: string;
-  password: string;
-  re_password: string;
-
-constructor(name: string, email: string, password: string, re_password: string) {
-    this.name = name;
-    this.email = email;
-    this.password = password;
-    this.re_password = re_password;
-  }
-}
-
-  
-
-  

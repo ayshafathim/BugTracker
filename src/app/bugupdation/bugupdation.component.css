@@ -69,19 +69,29 @@
 	 border: none;
   }
 
-  .add{
-	height: 50px;
-	margin-left: 880px;
-    width: 170px;
-    display: flex;
-    align-items: center;
-	text-align: center;
-    justify-content: space-between;
-    padding: 20px 20px 10px 20px;
-     border: none;
-	background-color:#b6cfde; 
-	margin-bottom: 30px;
+  .delete-button {
+	background-color: #b6cfde; /* Set the background color */
+	color: black; /* Set the text color */
+	border: none; /* Remove the button border */
+	padding: 10px 20px; /* Add padding around the button text */
+	border-radius: 4px; /* Round the button corners */
+	cursor: pointer; /* Change the cursor to a pointer on hover */
+	font-weight: bolder;
   }
+  .edit-button {
+	background-color: #b6cfde; /* Set the background color */
+	color: black; /* Set the text color */
+	border: none; /* Remove the button border */
+	padding: 10px 20px; /* Add padding around the button text */
+	border-radius: 4px; /* Round the button corners */
+	cursor: pointer; /* Change the cursor to a pointer on hover */
+	font-weight: bolder;
+  }
+  
+  .delete-button:hover {
+	background-color: #cc0000; /* Change the background color on hover */
+  }
+  
   
   .status-block {
 	display: inline-block;
@@ -94,9 +104,12 @@
   }
   .reopen {
 	background-color: red;
-	color: white;
+	color: black;
 	border-radius: 5px;
 	font-weight: bold;
+	height: 30px;
+	padding: 5px 10px;
+	text-align: center;
   }
   
   .open {
@@ -104,13 +117,19 @@
 	color: white;
 	border-radius: 5px;
 	font-weight: bold;
+	height: 30px;
+	padding: 5px 10px;
+	text-align: center;
   }
   
   .closed {
 	background-color: green;
-	color: white;
+	color: black;
 	border-radius: 5px;
 	font-weight: bold;
+	height: 30px;
+	padding: 5px 10px;
+	text-align: center;
   }
   
   .in-progress {
@@ -118,6 +137,8 @@
 	color: black;
 	border-radius: 5px;
 	font-weight: bold;
+	padding: 5px 10px;
+	text-align: center;
   }
   
   .select-wrapper {
@@ -142,5 +163,9 @@
 	border-right: 6px solid transparent;
 	border-top: 6px solid #000;
 	pointer-events: none;
+  }
+  .button-group {
+	display: flex;
+	gap: 5px; /* Adjust the spacing between buttons as needed */
   }
   

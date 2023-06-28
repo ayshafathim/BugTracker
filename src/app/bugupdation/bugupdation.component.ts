@@ -44,6 +44,10 @@ export class BugupdationComponent {
     // Add more bug objects as needed
   ];
 
+  editBug(bug: Bug): void {
+    this.router.navigate(['/editbug', bug.Id]);
+  }
+  
 
   logout() {
    
@@ -112,4 +116,6 @@ export class BugupdationComponent {
         return '';
     }
   }
+
+  
 }

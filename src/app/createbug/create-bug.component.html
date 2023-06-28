@@ -11,50 +11,41 @@
     <div class="container">
 
       <h4>Create Bug</h4>
-      <!-- <div class="mf"> -->
+
       <form >
         
 
-<!-- <div class="=fg1"> -->
+
   <div class="fefy">
         <div class="form-group">
-         <label for="projectName">Project Id:</label>
+         <label for="projectName">Id:</label>
         <input type="text" class="form-control" id="projectName" placeholder="Enter the project Id"  name="projectName">
         </div>
 
         <div class="form-group">
-          <label for="projectName"> name:</label>
+          <label for="projectName"> Bug name:</label>
           <input type="text" class="form-control" id="projectName" placeholder="Enter the bug name"  name="projectName">
         </div>
         <div class="form-group">
-          <label for="projectName">description:</label>
+          <label for="projectName">Bug Description:</label>
          <input type="text" class="form-control" id="projectName" placeholder="Enter the bug description"  name="projectName">
          </div>
 
         <div class="form-group">
-          <label for="projectName">assigned To:</label>
+          <label for="projectName">Developer:</label>
          <input type="text" class="form-control" id="projectName" placeholder="Enter Name"  name="projectName">
          </div>
 
-       
-
         <div class="form-group">
-          <label for="projectName">applicationImpacted:</label>
-         <input type="text" class="form-control" id="projectName" placeholder="Enter application impacted"  name="projectName">
-         </div>
-        
-        <div class="form-group">
-          <label for="projectName">createdOn:</label>
+          <label for="projectName">CreatedOn:</label>
          <input type="text" class="form-control" id="projectName" placeholder="Enter date"  name="projectName">
          </div>
 
         <div class="form-group">
-          <label for="projectName">createdBy:</label>
+          <label for="projectName">Reporter:</label>
          <input type="text" class="form-control" id="projectName" placeholder="Enter Name"  name="projectName">
          </div>
-<!-- </div> -->
-         
-<!-- <div class="fg"> -->
+
  <div class="drop1">
   <label for="dropdown1">Select Priority:</label>
   <select id="dropdown1">
@@ -67,6 +58,8 @@
   <select id="dropdown2">
     <option value="optionA">Open</option>
     <option value="optionB">Closed</option>
+    <option value="optionB">On Progress</option>
+    <option value="optionB">Reopen</option>
    
   </select>
   <button (click)="assignTask()" class="btn btn-primary" id="but" >Assign Task</button>
@@ -74,45 +67,14 @@
 </div>
 </div>
 
-
-  
-  
-
-
-
-
-  
-
-          <!-- <div class="form-group">
-            <label for="description">Status:</label>
-            <textarea class="form-control" id="description" placeholder="Enter the bug status" [(ngModel)]="projectDescription" name="projectDescription"></textarea>
-          </div> -->
-
-          <!-- <div class="form-group">
-            <label for="description">Description:</label>
-            <textarea class="form-control" id="description" placeholder="Enter the project description" [(ngModel)]="projectDescription" name="projectDescription"></textarea>
-          </div> -->
-  <!-- </div> -->
-  
-
   <br/>  <br/>  <br/>
-
   <div style="margin-left: 380px;">
- 
-   
 
         <!-- <button type="submit" class="btn btn-primary" id="but" >Assign Task</button> -->
-
         &nbsp;
-
       </div>
-
       </form>
-    <!-- </div> -->
 
   </div>
-   
-
-    <!-- <-- Include Angular and Bootstrap JS files here -->
 
   </body>

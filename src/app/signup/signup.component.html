@@ -1,54 +1,56 @@
-<body>
-    <div class="main">
-    <form action="#" (ngSubmit)="submit()" #myForm="ngForm">
-        <section class="signup">
-       <!-- <img src="images/signup-bg.jpg" alt="">  -->
-            <div class="container">
-                <div class="signup-content">
-                    <!-- <form method="POST" id="signup-form" class="signup-form"> -->
-                        <h2 class="form-title">Create account</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" [(ngModel)]="cred.name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="email" id="email" placeholder="Your Email" [(ngModel)]="cred.email"  pattern="[a-zA-Z0-9._%+-]+@[a-z]+\.[a-zA-Z]{2,}" (blur)="checkEmail()" required email>
-                        </div>
-                       
-                        <div  class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password" [(ngModel)]="cred.password" (blur)="checkPasswords()"> 
-                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                        </div>
-                          <div class="form-group">
-                           
-                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Confirm your password" [(ngModel)]="cred.re_password" (blur)="checkPasswords()">
-                         <div *ngIf="!passwordsMatch">Passwords do not match.</div>
-                           </div>  
 
-                           <div class="form-group">
-                            <select id="role" class="form-control"  required>
-                                <option disabled selected>Role</option>
-                                <option value="admin">User</option>
-                                <option value="user">Admin</option>
-                              </select>
-                          </div>
-
-
-
-
-    
-                        <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up" (click)="submit()" [disabled]="!myForm.form.valid"/>
-                        </div>
-            
-                    <p class="loginhere">
-                        Have already an account ? <a (click)="submit()" ><b>Login here</b></a>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </form>
+<head>
+    <title>Signup Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Include custom CSS -->
+   
+  </head>
+  <body>
+    <h2>Signup</h2>
+    <div class="container">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label>Username:</label>
+          <input type="text" formControlName="username" class="form-control" />
+          <div *ngIf="username?.invalid && username?.touched">
+            <div *ngIf="username?.errors?.['required']">Username is required.</div>
+          </div>
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="email" formControlName="email" class="form-control" />
+          <div *ngIf="email?.invalid && email?.touched">
+            <div *ngIf="email?.errors?.['required']">Email is required.</div>
+            <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" formControlName="password" class="form-control" />
+          <div *ngIf="password?.invalid && password?.touched">
+            <div *ngIf="password?.errors?.['required']">Password is required.</div>
+          </div>
+        </div>
+        <div>
+          <label>Confirm Password:</label>
+          <input type="password" formControlName="confirmPassword" class="form-control" />
+          <div *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+            <div *ngIf="confirmPassword?.errors?.['required']">Confirm password is required.</div>
+            <div *ngIf="signupForm?.errors?.['passwordMismatch']">Password doesn't match.</div>
+          </div>
+        </div>
+        <button type="submit" [disabled]="signupForm?.invalid" class="btn btn-primary">Signup</button>
+        <p class="loginhere">
+          Have already an account? <a routerLink="/login">Login here</a>
+        </p>
+      </form>
     </div>
-    </body>
-    
-    
+    <div *ngIf="isAccountCreated">Account is created.</div>
+  
+  
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
 
+  

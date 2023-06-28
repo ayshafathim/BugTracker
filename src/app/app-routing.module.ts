@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LandingComponent } from './landing/landing.component';
 import { SubadminComponent } from './subadmin/subadmin.component';
+import { EditbugComponent } from './editbug/editbug.component';
 
 const routes: Routes = [
   {path:'bugupdation',component:BugupdationComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
  {path:'login',component:LoginComponent},
  {path:'settings',component:SettingsComponent},
  {path:'subadmin',component:SubadminComponent},
+ {path:'editbug/:id',component:EditbugComponent},
  {path:'',component:LandingComponent}
   
 ];
