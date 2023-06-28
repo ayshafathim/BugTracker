@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { Bug } from '../bug.model';
+import { Bug } from '../model/BugEntity';
 import { Router } from '@angular/router';
 import { BugService } from '../bug.service';
 import { FormsModule } from '@angular/forms';

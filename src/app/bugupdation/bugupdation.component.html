@@ -65,8 +65,8 @@
 				<table class="table">
 				  <thead>
 					<tr>
-					  <th>ID</th>
-					  <th>Bug Name</th>
+					  <th>id</th>
+					  <th>name</th>
 					  <th>Description</th>
 					  <th>Developer</th>
 					  <th>Reporter</th>
@@ -78,8 +78,8 @@
 				  </thead>
 				  <tbody>
 					<tr *ngFor="let bug of filteredBugs; let i = index">
-					  <td>{{ bug.Id }}</td>
-					  <td>{{ bug.bugName }}</td>
+					  <td>{{ bug.id }}</td>
+					  <td>{{ bug.name }}</td>
 					  <td>{{ bug.description }}</td>
 					  <td>{{ bug.developer }}</td>
 					  <td>{{ bug.reporter }}</td>
@@ -106,7 +106,7 @@
 						<div class="arrow"></div>
 					</div>
 					  </td>
-					  <td>{{ formatDate(bug.createdDate) }}</td>
+					  <td>{{ formatDate(bug.createdOn) }}</td>
 					  <td>
 						<div class="button-group">
 						  <button class="edit-button" (click)="editBug(bug)">Edit</button>

@@ -198,23 +198,25 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Bug Name</th>
+                    <th>id</th>
+                    <th>name</th>
                     <th>Description</th>
-                    <th>Assigned To</th>
-                    <th>Assigned By</th>
+                    <th>Developer</th>
+                    <th>Reporter</th>
                     <th>Status</th>
                     <th>Update Status</th>
                     <th>Created Date</th>
+					<th>projectId</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let bug of filteredBugs; let i = index">
-                    <td>{{ bug.Id }}</td>
-                    <td>{{ bug.bugName }}</td>
+                    <td>{{ bug.id }}</td>
+                    <td>{{ bug.name }}</td>
                     <td>{{ bug.description }}</td>
                     <td>{{ bug.developer }}</td>
                     <td>{{ bug.reporter }}</td>
+					
                     <!-- <td>
                       <div [ngClass]="{'status-block': true, 'open': bug.status === 'Open', 'closed': bug.status === 'Closed', 'in-progress': bug.status === 'In Progress'}">
                         {{ bug.status }}
@@ -237,7 +239,8 @@
 						</div>
 					  </td>
 					  
-                    <td>{{ formatDate(bug.createdDate) }}</td>
+                    <td>{{ formatDate(bug.createdOn) }}</td>
+					<td>{{ bug.projectId }}</td>
                   </tr>
                 </tbody>
               </table>

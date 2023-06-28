@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Bug } from './bug.model';
+import { Bug } from './model/BugEntity';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,7 +14,7 @@ export class BugService {
   assignTask(newBug: Bug) {
     // Implement the logic to assign a task to a bug
     // For example, you can update the bug's developer or status
-    const bugToUpdate = this.bugs.find(bug => bug.Id === newBug.Id);
+    const bugToUpdate = this.bugs.find(bug => bug.id === newBug.id);
     if (bugToUpdate) {
       bugToUpdate.developer = newBug.developer;
       bugToUpdate.status = newBug.status;
@@ -43,7 +43,7 @@ export class BugService {
   }
 
   updateBug(bug: Bug): Observable<any> {
-    const url = `${this.baseUrl}/bugs/${bug.Id}`; // Replace with the actual endpoint for updating a bug
+    const url = `${this.baseUrl}/bugs/${bug.id}`; // Replace with the actual endpoint for updating a bug
     return this.http.put(url, bug);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Bug } from '../bug.model';
+import { Bug } from '../model/BugEntity';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BugService } from '../bug.service';
 

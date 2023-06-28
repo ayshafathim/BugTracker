@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Bug } from '../bug.model';
+import { BugEntity } from '../model/BugEntity';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -20,32 +20,34 @@ export class BugupdationComponent {
   //   this.router.navigate(['/createbug']);
   // }
 
-  bugs: Bug[] = [
+  bugs: BugEntity[] = [
     {
-      Id: 1,
-      bugName: 'Bug 1',
+      id: 1,
+      name: 'Bug 1',
       description: 'This is bug 1 description',
       developer: 'John Doe',
       reporter: 'Jane Smith',
       status: 'In Progress',
       updateStatus: '',
-      createdDate: '2023-06-17T08:30:00.000Z'
+      createdOn: '2023-06-17T08:30:00.000Z',
+      projectId:1
     },
     {
-      Id: 2,
-      bugName: 'Bug 2',
+      id: 2,
+      name: 'Bug 2',
       description: 'This is bug 2 description',
       developer: 'John Doe',
       reporter: 'Jane Smith',
       status: 'Closed',
       updateStatus: '',
-      createdDate: '2023-06-18T10:15:00.000Z'
+      createdOn: '2023-06-18T10:15:00.000Z',
+      projectId:1
     },
     // Add more bug objects as needed
   ];
 
-  editBug(bug: Bug): void {
-    this.router.navigate(['/editbug', bug.Id]);
+  editBug(bug: BugEntity): void {
+    this.router.navigate(['/editbug', bug.id]);
   }
   
 
@@ -58,26 +60,27 @@ export class BugupdationComponent {
     this.bugs.splice(index, 1); // Remove the bug from the array based on the provided index
   }
 
-  updateBugStatus(bug: Bug) {
+  updateBugStatus(bug: BugEntity) {
     // Perform any necessary update logic here, such as making an API call
-    console.log(`Bug ${bug.bugName} status updated to: ${bug.status}`);
+    console.log(`Bug ${bug.name} status updated to: ${bug.status}`);
 
     bug.updateStatus = bug.status; // Update the 'updateStatus' field with the new status
   }
 
-  formatDate(dateString: string): string {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    return `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year}`;
+  formatDate(date: Date): string {
+    const options: Intl.DateTimeFormatOptions = {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    };
+    return new Intl.DateTimeFormat('en-US', options).format(date);
   }
 
   search(): void {
-    this.filteredBugs = this.bugs.filter((bug: Bug) => {
+    this.filteredBugs = this.bugs.filter((bug: BugEntity) => {
       const searchTextLower = this.searchText.toLowerCase();
-      const idMatch = bug.Id.toString().includes(searchTextLower);
-      const nameMatch = bug.bugName.toLowerCase().includes(searchTextLower);
+      const idMatch = bug.id.toString().includes(searchTextLower);
+      const nameMatch = bug.name.toLowerCase().includes(searchTextLower);
       const statusMatch = bug.status.toLowerCase().includes(searchTextLower);
   
       return idMatch || nameMatch || statusMatch;
@@ -85,7 +88,7 @@ export class BugupdationComponent {
   }
   
 
-  filteredBugs: Bug[] = this.bugs; // Initialize with all bugs on component load
+  filteredBugs: BugEntity[] = this.bugs; // Initialize with all bugs on component load
 
 
   getStatusClass(status: string): string {
